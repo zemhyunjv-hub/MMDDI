@@ -23,7 +23,7 @@ from torch.utils.data import DataLoader
 from radam import RAdam
 import torch.nn.functional as F
 
-from contrastive_test import perturb_zeros_to_ones, shuffle_random_segment
+from ConOperation import perturb_zeros_to_ones, shuffle_random_segment
 # from MINE_test import MINE
 from distangling2_test import mutual_information_loss
 from metrics_test import Metric
@@ -876,5 +876,6 @@ if __name__ == '__main__':
     start = time.time()
     cross_val(embeddingtable1, embeddingtable2)
     print("time used:", (time.time() - start) / 3600)
+
 
 
